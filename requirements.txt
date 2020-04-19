@@ -1,0 +1,9 @@
+altair==4.1.0
+great_expectations==0.10.1
+jupyterlab
+matplotlib
+numpy
+pandas
+pandas-profiling[notebook,html]
+seaborn
+

@@ -1,0 +1,214 @@
+{
+  "data_asset_type": "Dataset",
+  "expectation_suite_name": "nyc_extract.warning",
+  "expectations": [
+    {
+      "expectation_type": "expect_table_columns_to_match_ordered_list",
+      "kwargs": {
+        "column_list": [
+          "YEAR",
+          "SAMPLE",
+          "SERIAL",
+          "CBSERIAL",
+          "HHWT",
+          "CLUSTER",
+          "STATEFIP",
+          "COUNTYFIP",
+          "CITY",
+          "CITYPOP",
+          "STRATA",
+          "GQ",
+          "SSMC",
+          "PERNUM",
+          "PERWT",
+          "SEX",
+          "AGE",
+          "MARST",
+          "MARRNO",
+          "YRMARR",
+          "RACE",
+          "RACED",
+          "INCTOT",
+          "FTOTINC",
+          "AGE_SP",
+          "RACE_SP"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "SEX"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "SEX",
+        "value_set": [
+          1,
+          2
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "SEX",
+        "max_value": 2,
+        "min_value": 1
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "MARST"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "MARST",
+        "max_value": 6,
+        "min_value": 1
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "CITYPOP",
+        "max_value": 90000,
+        "min_value": 80000
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "AGE_SP",
+        "mostly": 0.4
+      },
+      "meta": {}
+    }
+  ],
+  "meta": {
+    "BasicSuiteBuilderProfiler": {
+      "batch_kwargs": {
+        "datasource": "files_datasource",
+        "path": "/Users/kennethning/repos/marriage/data/nyc_extract.csv",
+        "reader_method": "read_csv"
+      },
+      "created_at": 1587229167.526069,
+      "created_by": "BasicSuiteBuilderProfiler"
+    },
+    "citations": [
+      {
+        "batch_kwargs": {
+          "datasource": "files_datasource",
+          "path": "/Users/kennethning/repos/marriage/data/nyc_extract.csv",
+          "reader_method": "read_csv"
+        },
+        "batch_markers": {
+          "ge_load_time": "20200418T165927.195832Z",
+          "pandas_data_fingerprint": "e89fc388247f8cb985f322439eb2b170"
+        },
+        "batch_parameters": null,
+        "citation_date": "2020-04-18T12:59:27.571684",
+        "comment": "BasicSuiteBuilderProfiler added a citation based on the current batch."
+      }
+    ],
+    "columns": {
+      "AGE": {
+        "description": ""
+      },
+      "AGE_SP": {
+        "description": ""
+      },
+      "CBSERIAL": {
+        "description": ""
+      },
+      "CITY": {
+        "description": ""
+      },
+      "CITYPOP": {
+        "description": ""
+      },
+      "CLUSTER": {
+        "description": ""
+      },
+      "COUNTYFIP": {
+        "description": ""
+      },
+      "FTOTINC": {
+        "description": ""
+      },
+      "GQ": {
+        "description": ""
+      },
+      "HHWT": {
+        "description": ""
+      },
+      "INCTOT": {
+        "description": ""
+      },
+      "MARRNO": {
+        "description": ""
+      },
+      "MARST": {
+        "description": ""
+      },
+      "PERNUM": {
+        "description": ""
+      },
+      "PERWT": {
+        "description": ""
+      },
+      "RACE": {
+        "description": ""
+      },
+      "RACED": {
+        "description": ""
+      },
+      "RACE_SP": {
+        "description": ""
+      },
+      "SAMPLE": {
+        "description": ""
+      },
+      "SERIAL": {
+        "description": ""
+      },
+      "SEX": {
+        "description": ""
+      },
+      "SSMC": {
+        "description": ""
+      },
+      "STATEFIP": {
+        "description": ""
+      },
+      "STRATA": {
+        "description": ""
+      },
+      "YEAR": {
+        "description": ""
+      },
+      "YRMARR": {
+        "description": ""
+      }
+    },
+    "great_expectations.__version__": "0.10.1",
+    "notes": {
+      "content": [
+        "#### This is an _example_ suite\n\n- This suite was made by quickly glancing at 1000 rows of your data.\n- This is **not a production suite**. It is meant to show examples of expectations.\n- Because this suite was auto-generated using a very basic profiler that does not know your data like you do, many of the expectations may not be meaningful.\n"
+      ],
+      "format": "markdown"
+    }
+  }
+}
